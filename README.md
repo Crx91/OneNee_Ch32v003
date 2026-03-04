@@ -1,9 +1,8 @@
 # OneNee_Ch32v003
-PsNee + OneChip port to the ch32v003 for PAL PM41 boards.
+PsNee + OneChip port to the ch32v003 for PAL PM41 boards rev_3.
 
-**Warning**: Updated code is avaiable at [Rev_2](https://github.com/carmax91/OneNee_Ch32v003/tree/Rev_2) branch!
-
-Port of PsNee v7/v8 with OneChip BIOS patching for the WCH ch32v003 MCU. Full stealth and BIOS patching on PAL PM41-v1 and PM41-v2 boards! 
+Port of PsNee v7/v8 with OneChip BIOS patching for the WCH ch32v003 MCU. Full stealth and BIOS patching on PAL PM41-v1 and PM41-v2 boards
+to allow booting of USA and JAP games! 
 Virtually any noise or degradation to the laser RF signal level because the code injects the SCEX string only when needed. 
 This code is ONLY compatible with PM-41v1 and PM-41v2 PAL motherboards.
 
@@ -14,7 +13,7 @@ Code is written using ch32fun libs avoiding HAL when possible. The result are le
 Why I haven't ported "postal" PsNee v8? Simply because JAP bios patching is bugged (with some BIOS menu crashes) and until a fix came out i'm not interested in a porting...
 
 For the 8-pin ch32v003j4m6 i'm using the pin multiplexing feature, so you can use "pin-8" (as input only!) for the console point Bios_a18 
-and, if you need reprogramm the chip, you can do without any bricking risk!
+and, if you need reprogram the chip, you can do without any bricking risk!
 
 **Warning:**
 - This code is only compatible with Psone Scph-102 with PAL bios. For the other models, you can use my [PsNee_ch32v003](https://github.com/carmax91/PsNee-CH32V003) port.
@@ -23,8 +22,8 @@ and, if you need reprogramm the chip, you can do without any bricking risk!
 
 - Full Stealth!
 - Virtually any noise or degradation on the laser RF signal level unlike the old oldcrow\mayumi\multimode mod.
-- PAL Bios patching feature for USA and JAP games.
-- No atmega328p+16mhz cristal or other arduino uno like "big" board, simply a 8-pin ch32v003j4m6 chip to solder that can be easly fitted in your console!
+- PAL Bios patching feature for USA and JAP games boot.
+- No atmega328p+16mhz cristal or other arduino uno like "big" boards, simply a 8-pin ch32v003j4m6 chip to solder that can be easly fitted in your console!
 - Bin files should be compatible even on other ch32v003 package (SOP-16, TSSOP-20 and QFN-20) and valutation board provided that you remove the external osc!
 
 ## Supported Playstations
@@ -44,7 +43,7 @@ and, if you need reprogramm the chip, you can do without any bricking risk!
 - Open LinkUtility and check if the tool sees the programmer.
 - Set the core (RISC-V) and the series (CH32V003).
 - Click on the folder icon (or press ALT+F1)
-- Select the compiled OneNee_Fun[PAL].BIN file (you can find the bin file in the [BIN](https://github.com/carmax91/OneNee_Ch32v003/tree/main/BIN) folder).
+- Select the compiled OneNee_Fun[PAL].BIN file (you can find the bin file in the [BIN](https://github.com/Crx91/OneNee_Ch32v003/tree/main/BIN%20(rev3)) folder.
 - Connect the chip to the programmer.
 - Program the chip via Target -> Program (or press F10).
 - ![done](https://github.com/carmax91/OneNee_Ch32v003/blob/main/Imgs/Linw.jpg)
@@ -55,6 +54,10 @@ and, if you need reprogramm the chip, you can do without any bricking risk!
 I've ported the code to the ch32fun platform wich is lighter faster and ages better than the official WCH bugged arduino platform!
 All in bare-metal and the difference is huge!!!!
 Even because we don't have to carry anymore all the bloatware (super bugged) HAL of arduino libs! So now the code is way faster and efficient!
+
+- The rev_2 has newer timing implementation made by the great @kalymos, code now is even smaller and no more ISR timing dipendent!
+- The rev_3 has on the Injection function updated WFCK modulation for 7.3/14.6 kHz compatibility. (Always thaks to kalymos!). I've also removed all the unnecessary code 
+  statements and function related to the old injection mode for PU-7 to PU-20 motherboards. The code now uses 1372 bytes of flash (8.4%) 0 bytes of ram!
 
 ## Why this modc. is better and different compared to the older oldcrow\mayumi\multimode\onchip\stealth2.x? (extracted part from PsNeev7 readme)
 
