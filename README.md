@@ -1,7 +1,7 @@
 # OneNee_Ch32v003
 PsNee + OneChip port to the ch32v003 for PAL PM41 boards.
 
-**Warning**: Updated code is avaiable at [Rev_2](https://github.com/carmax91/OneNee_Ch32v003/tree/Rev_2) branch!
+**Warning**: Updated [Rev_3](https://github.com/Crx91/OneNee_Ch32v003) code is avaiable at main branch!
 
 Port of PsNee v7/v8 with OneChip BIOS patching for the WCH ch32v003 MCU. Full stealth and BIOS patching on PAL PM41-v1 and PM41-v2 boards! 
 Virtually any noise or degradation to the laser RF signal level because the code injects the SCEX string only when needed. 
@@ -44,12 +44,12 @@ and, if you need reprogramm the chip, you can do without any bricking risk!
 - Open LinkUtility and check if the tool sees the programmer.
 - Set the core (RISC-V) and the series (CH32V003).
 - Click on the folder icon (or press ALT+F1)
-- Select the compiled OneNee_Fun[PAL].BIN file (you can find the bin file in the [BIN](https://github.com/carmax91/OneNee_Ch32v003/tree/main/BIN) folder).
+- Select the compiled OneNee_Fun[PAL].BIN file (you can find the bin file in the [BIN](https://github.com/carmax91/OneNee_Ch32v003/tree/Rev_1/BIN) folder).
 - Connect the chip to the programmer.
 - Program the chip via Target -> Program (or press F10).
 - ![done](https://github.com/carmax91/OneNee_Ch32v003/blob/main/Imgs/Linw.jpg)
 - Now you have your OneNee on WCH CH32V003 chip!
-- For the installation, follow the wiring diagrams in the [Install](https://github.com/carmax91/OneNee_Ch32v003/tree/main/Install) folder based on your console motherboard.
+- For the installation, follow the wiring diagrams in the [Install](https://github.com/carmax91/OneNee_Ch32v003/tree/Rev_1/Install) folder based on your console motherboard.
 
 ## Some info about the source code
 I've ported the code to the ch32fun platform wich is lighter faster and ages better than the official WCH bugged arduino platform!
