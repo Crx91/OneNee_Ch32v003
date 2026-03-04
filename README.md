@@ -1,6 +1,8 @@
 # OneNee_Ch32v003
 PsNee + OneChip port to the ch32v003 for PAL PM41 boards. (rev2b)
 
+**Warning**: Updated [Rev_3](https://github.com/Crx91/OneNee_Ch32v003) code is avaiable at main branch!
+
 Port of PsNee v8 (with newer ISR-less implementation of Kalymos) with OneChip BIOS patching for the WCH ch32v003 MCU. Full stealth and BIOS patching on PAL PM41-v1 and PM41-v2 boards! 
 Virtually any noise or degradation to the laser RF signal level because the code injects the SCEX string only when needed. 
 This code is ONLY compatible with PM-41v1 and PM-41v2 PAL motherboards.
